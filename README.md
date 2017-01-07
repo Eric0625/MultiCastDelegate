@@ -34,7 +34,7 @@ let handler = MultiCastDelegator <DisplayMessageDelegate>()
 handler.invoke(){ $0.displayMessage(message) }
 `
 
-<b>###Full sample code:</b><br>
+######Full sample code:<br>
 ```
 protocol DisplayMessageDelegate {
     func displayMessage(_ message: String)
@@ -94,7 +94,7 @@ MainClass.timeToDisplay("the message")
 
 3.简单明了的使用方法
 
-###使用方法:
+######使用方法:
 
 1.构造你的委托协议
 
