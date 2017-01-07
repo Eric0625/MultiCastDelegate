@@ -162,6 +162,6 @@ class MainClass {
 let displayer1 = MessageBox()
 let displayer2 = MessageBoard()
 
-//when you need to display, call it
+//在需要显示信息的地方调用它
 MainClass.timeToDisplay("the message")
 ```
