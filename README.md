@@ -12,7 +12,7 @@ This MuitiCastDelgator was built to solve such problem, it can give you simple r
 
 3.Very simple usage.
 
-Usage:
+###Usage:
 
 1.Define your protocol
 
@@ -34,7 +34,7 @@ let handler = MultiCastDelegator <DisplayMessageDelegate>()
 handler.invoke(){ $0.displayMessage(message) }
 `
 
-<b>Full sample code:</b><br>
+<b>###Full sample code:</b><br>
 ```
 protocol DisplayMessageDelegate {
     func displayMessage(_ message: String)
@@ -85,13 +85,16 @@ MainClass.timeToDisplay("the message")
 ```
 
 我们都知道Swift只支持对单个变量声明weak或unowned关键字。但多播委托要求将委托者存入一个数组或链表中。如果只是简单地实现一个委托数组，则数组中元素均为强引用，这样所有的委托者都有可能和主类形成循环引用，或者在主类是静态类型的情况下该委托者永远不会被释放。
+
 <br>这个MuitiCastDelgator类即可解决上述问题。它具备如下特性：
 
 1.只创建弱引用
+
 2.自动清理已被释放的委托者
+
 3.简单明了的使用方法
 
-使用方法:
+###使用方法:
 
 1.构造你的委托协议
 
@@ -113,7 +116,7 @@ let handler = MultiCastDelegator <DisplayMessageDelegate>()
 handler.invoke(){ $0.displayMessage(message) }
 `
 
-<b>完整例子:</b><br>
+<b>###完整例子:</b><br>
 ```
 protocol DisplayMessageDelegate {
     func displayMessage(_ message: String)
