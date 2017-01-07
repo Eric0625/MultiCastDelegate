@@ -45,11 +45,7 @@ class MessageBox: DisplayMessageDelegate {
     init(){
       main.handler += self
     }
-    
-    deinit {
-      main.hanlder -= self
-    }
-    
+   
     func displayMessage(_ message: String) {
       //display the message
     }
@@ -59,10 +55,6 @@ class MessageBoard: DisplayMessageDelegate {
 
     init(){
       MainClass.handler += self
-    }
-    
-    deinit {
-      MainClass.hanlder -= self
     }
     
     func displayMessage(_ message: String) {
@@ -128,10 +120,6 @@ class MessageBox: DisplayMessageDelegate {
       main.handler += self
     }
     
-    deinit {
-      main.hanlder -= self
-    }
-    
     func displayMessage(_ message: String) {
       //display the message
     }
@@ -142,11 +130,7 @@ class MessageBoard: DisplayMessageDelegate {
     init(){
       MainClass.handler += self
     }
-    
-    deinit {
-      MainClass.hanlder -= self
-    }
-    
+   
     func displayMessage(_ message: String) {
       //display the message
     }
