@@ -10,7 +10,7 @@ This MuitiCastDelgator was built to solve such problem, it can give you simple r
 
 2.Auto cleaning of destroied delegates.
 
-3.Very simple usage.(3 steps)
+3.Very simple usage.(4 steps)
 
 ### Usage:
 
