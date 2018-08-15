@@ -6,11 +6,13 @@ As we know Swift only support weak/unowned key word for class variables,not for 
 
 This MuitiCastDelgator was built to solve such problem, it can give you simple resolution of multicast in Swift.The features are:
 
-1.Only create weak refrence , same as the single delegate pattern
+1. Pure swift implemention, strong type checking and full support to all protocol
 
-2.Auto cleaning of destroied delegates.
+2. Only create weak refrence , same as the single delegate pattern
 
-3.Very simple usage.(4 steps)
+3. Auto cleaning of destroied delegates.
+
+4. Very simple usage.(4 steps)
 
 ### Usage:
 
