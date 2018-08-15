@@ -10,11 +10,11 @@ This MuitiCastDelgator was built to solve such problem, it can give you simple r
 
 2.Auto cleaning of destroied delegates.
 
-3.Very simple usage.
+3.Very simple usage.(3 steps)
 
 ###Usage:
 
-1.Define your protocol
+1.Define your protocol(put it anywhere, either in single file or before the class definition)
 
 ```
 protocol DisplayMessageDelegate {
@@ -22,18 +22,30 @@ protocol DisplayMessageDelegate {
 }
 ```
 
-2.In your class which invokes the delegate, define a variable of MultiCastDelegator type
+2.In your class from which the message is sent, define a variable of MultiCastDelegator type
 
 `
 let handler = MultiCastDelegator <DisplayMessageDelegate>()
 `
 
-3.Write the code below where you need to inform delegate to display message
+3.In the same class, write the code at the place where you want to send the message
 
 `
 handler.invoke(){ $0.displayMessage(message) }
 `
 
+4.In the receiver class, pass `self` to the `handler` variable, then implement the protocol
+`
+...
+    MainClass.handler += self
+...
+
+extension YourReceiver: DisplayMessageDelegate {
+    func displayMessage(_ message: String) {
+      //display the message
+    }
+}
+`
 ###Full sample code:<br>
 ```
 protocol DisplayMessageDelegate {
