@@ -37,7 +37,9 @@ handler.invoke(){ $0.displayMessage(message) }
 4.In the receiver class, pass `self` to the `handler` variable, then implement the protocol
 
 ```
+...
 MainClass.handler += self
+...
 
 extension YourReceiver: DisplayMessageDelegate {
     func displayMessage(_ message: String) {
