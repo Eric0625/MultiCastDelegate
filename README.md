@@ -1,6 +1,6 @@
 # MultiCastDelegate
-##Implementing multi cast of delegate in Swift 
-##实现Swift下的多播委托（中文说明见下）
+## Implementing multi cast of delegate in Swift 
+## 实现Swift下的多播委托（中文说明见下）
 
 As we know Swift only support weak/unowned key word for class variables,not for array or collection types. But multicast delegating require storing delegate protocol in arrays. So simply create an array of protocol will point a strong refrence to the delegate which will eventually cause 1.refrence cycle, 2.the delegate may never be released if the caller is static.
 
@@ -12,7 +12,7 @@ This MuitiCastDelgator was built to solve such problem, it can give you simple r
 
 3.Very simple usage.(3 steps)
 
-###Usage:
+### Usage:
 
 1.Define your protocol(put it anywhere, either in single file or before the class definition)
 
@@ -35,6 +35,7 @@ handler.invoke(){ $0.displayMessage(message) }
 `
 
 4.In the receiver class, pass `self` to the `handler` variable, then implement the protocol
+
 `
 ...
     MainClass.handler += self
@@ -46,7 +47,8 @@ extension YourReceiver: DisplayMessageDelegate {
     }
 }
 `
-###Full sample code:<br>
+
+### Full sample code:<br>
 ```
 protocol DisplayMessageDelegate {
     func displayMessage(_ message: String)
